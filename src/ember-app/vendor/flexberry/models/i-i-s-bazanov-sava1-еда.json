@@ -1,0 +1,60 @@
+﻿{
+  "name": "IISBazanovSava1Еда",
+  "modelName": "i-i-s-bazanov-sava1-еда",
+  "className": "Еда",
+  "nameSpace": "IIS.BazanovSava1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "продукты",
+      "relatedTo": "i-i-s-bazanov-sava1-продукты",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказ",
+      "relatedTo": "i-i-s-bazanov-sava1-заказ",
+      "inverse": "еда"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ЕдаE",
+      "modelName": "i-i-s-bazanov-sava1-еда",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Продукты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Продукты",
+          "name": "продукты",
+          "relatedTo": "i-i-s-bazanov-sava1-продукты",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

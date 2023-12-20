@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.BazanovSava1",
+  "className": "Оплата",
+  "enumObjects": {
+    "Безналичный": "Безналичный",
+    "Наличный": "Наличный"
+  }
+}

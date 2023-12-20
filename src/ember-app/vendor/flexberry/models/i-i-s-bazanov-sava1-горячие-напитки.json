@@ -1,0 +1,77 @@
+﻿{
+  "name": "IISBazanovSava1ГорячиеНапитки",
+  "modelName": "i-i-s-bazanov-sava1-горячие-напитки",
+  "className": "ГорячиеНапитки",
+  "nameSpace": "IIS.BazanovSava1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "сахар",
+      "type": "i-i-s-bazanov-sava1-колво-сахара",
+      "flexberryType": "КолвоСахара",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "напитки",
+      "relatedTo": "i-i-s-bazanov-sava1-напитки",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказ",
+      "relatedTo": "i-i-s-bazanov-sava1-заказ",
+      "inverse": "горячиеНапитки"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ГорячиеНапиткиE",
+      "modelName": "i-i-s-bazanov-sava1-горячие-напитки",
+      "attrs": [
+        {
+          "name": "сахар",
+          "caption": "Сахар",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Напитки",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Напитки",
+          "name": "напитки",
+          "relatedTo": "i-i-s-bazanov-sava1-напитки",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

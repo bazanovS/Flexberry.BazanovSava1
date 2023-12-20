@@ -1,0 +1,44 @@
+﻿{
+  "applicationCaption": "coffee",
+  "applicationTitle": "coffee",
+  "items": [
+    {
+      "link": null,
+      "menuName": "клиентам",
+      "caption": "Клиентам",
+      "title": "Клиентам",
+      "children": [
+        {
+          "link": "i-i-s-bazanov-sava1-заказ-l",
+          "menuName": null,
+          "caption": "Заказ",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "сотрудникам",
+      "caption": "Сотрудникам",
+      "title": "Сотрудникам",
+      "children": [
+        {
+          "link": "i-i-s-bazanov-sava1-продукты-l",
+          "menuName": null,
+          "caption": "Продукты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-bazanov-sava1-напитки-l",
+          "menuName": null,
+          "caption": "Напитки",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

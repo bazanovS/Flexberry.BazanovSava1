@@ -1,0 +1,1 @@
+docker-compose -p bazanovsava1-java up -d

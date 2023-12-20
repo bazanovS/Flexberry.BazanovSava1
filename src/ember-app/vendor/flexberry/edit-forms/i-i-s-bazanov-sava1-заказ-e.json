@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "продукты",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "Еда.Продукты",
+      "projection": "ПродуктыL",
+      "detailModelName": "i-i-s-bazanov-sava1-еда"
+    },
+    {
+      "master": "напитки",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "ГорячиеНапитки.Напитки",
+      "projection": "НапиткиL",
+      "detailModelName": "i-i-s-bazanov-sava1-горячие-напитки"
+    }
+  ],
+  "external": false,
+  "caption": "Заказ",
+  "name": "IISBazanovSava1ЗаказE",
+  "className": "ЗаказE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bazanov-sava1-заказ",
+      "modelProjection": "ЗаказE"
+    }
+  ]
+}

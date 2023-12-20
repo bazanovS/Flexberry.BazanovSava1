@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-bazanov-sava1-заказ-e",
+  "editForm": "i-i-s-bazanov-sava1-заказ-e",
+  "external": false,
+  "caption": "Заказ",
+  "name": "IISBazanovSava1ЗаказL",
+  "className": "ЗаказL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bazanov-sava1-заказ",
+      "modelProjection": "ЗаказL"
+    }
+  ]
+}

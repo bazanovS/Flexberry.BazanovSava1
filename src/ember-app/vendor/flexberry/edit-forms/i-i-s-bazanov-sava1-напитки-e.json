@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Напитки",
+  "name": "IISBazanovSava1НапиткиE",
+  "className": "НапиткиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bazanov-sava1-напитки",
+      "modelProjection": "НапиткиE"
+    }
+  ]
+}

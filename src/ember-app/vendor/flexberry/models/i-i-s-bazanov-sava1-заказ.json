@@ -1,0 +1,101 @@
+﻿{
+  "name": "IISBazanovSava1Заказ",
+  "modelName": "i-i-s-bazanov-sava1-заказ",
+  "className": "Заказ",
+  "nameSpace": "IIS.BazanovSava1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаЗаказа",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типОплаты",
+      "type": "i-i-s-bazanov-sava1-оплата",
+      "flexberryType": "Оплата",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "еда",
+      "relatedTo": "i-i-s-bazanov-sava1-еда",
+      "inverse": "заказ"
+    },
+    {
+      "name": "горячиеНапитки",
+      "relatedTo": "i-i-s-bazanov-sava1-горячие-напитки",
+      "inverse": "заказ"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЗаказE",
+      "modelName": "i-i-s-bazanov-sava1-заказ",
+      "attrs": [
+        {
+          "name": "датаЗаказа",
+          "caption": "Дата заказа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "типОплаты",
+          "caption": "Тип оплаты",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ЕдаE",
+          "caption": "Еда",
+          "name": "еда",
+          "relatedTo": "i-i-s-bazanov-sava1-еда",
+          "inverse": null
+        },
+        {
+          "projectionName": "ГорячиеНапиткиE",
+          "caption": "Горячие напитки",
+          "name": "горячиеНапитки",
+          "relatedTo": "i-i-s-bazanov-sava1-горячие-напитки",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЗаказL",
+      "modelName": "i-i-s-bazanov-sava1-заказ",
+      "attrs": [
+        {
+          "name": "датаЗаказа",
+          "caption": "Дата заказа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "типОплаты",
+          "caption": "Тип оплаты",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

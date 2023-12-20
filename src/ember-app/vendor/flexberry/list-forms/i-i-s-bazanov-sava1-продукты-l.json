@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-bazanov-sava1-продукты-e",
+  "editForm": "i-i-s-bazanov-sava1-продукты-e",
+  "external": false,
+  "caption": "Продукты",
+  "name": "IISBazanovSava1ПродуктыL",
+  "className": "ПродуктыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bazanov-sava1-продукты",
+      "modelProjection": "ПродуктыL"
+    }
+  ]
+}

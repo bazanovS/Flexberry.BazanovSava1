@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-bazanov-sava1-напитки-e",
+  "editForm": "i-i-s-bazanov-sava1-напитки-e",
+  "external": false,
+  "caption": "Напитки",
+  "name": "IISBazanovSava1НапиткиL",
+  "className": "НапиткиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bazanov-sava1-напитки",
+      "modelProjection": "НапиткиL"
+    }
+  ]
+}

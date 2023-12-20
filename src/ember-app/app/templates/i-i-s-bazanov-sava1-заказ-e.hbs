@@ -1,0 +1,76 @@
+<h3 class="ui header">{{t "forms.i-i-s-bazanov-sava1-заказ-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bazanov-sava1-заказ-e.датаЗаказа-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаЗаказа
+      class=(if (v-get validationModel "датаЗаказа" "isInvalid") "error")
+      data-test-i-i-s-bazanov-sava1-заказ-e-датаЗаказа=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаЗаказа" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-bazanov-sava1-заказ-e-типОплаты="true">
+    <label>{{t "forms.i-i-s-bazanov-sava1-заказ-e.типОплаты-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-bazanov-sava1-оплата")
+      value=model.типОплаты
+      class=(if (v-get validationModel "типОплаты" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "типОплаты" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bazanov-sava1-заказ-e.еда-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="едаGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.еда
+      content=model.еда
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "еда" "isInvalid") "error")
+      data-test-i-i-s-bazanov-sava1-заказ-e-еда=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "еда" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bazanov-sava1-заказ-e.горячиеНапитки-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="горячиеНапиткиGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.горячиеНапитки
+      content=model.горячиеНапитки
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "горячиеНапитки" "isInvalid") "error")
+      data-test-i-i-s-bazanov-sava1-заказ-e-горячиеНапитки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "горячиеНапитки" "message")}}
+  </div>
+</form>
